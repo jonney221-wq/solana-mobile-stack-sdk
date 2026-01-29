@@ -1,0 +1,31 @@
+/*
+ * Copyright (c) 2022 Solana Mobile Inc.
+ */
+
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "Wallet-API-SDK"
+include ':SeedVaultSimulator'
+include ':fakewallet'
+include ':seedvault'
+include ':cts'
+include ':ui:apptheme'
